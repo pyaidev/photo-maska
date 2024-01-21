@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+
+</head>
+<body>
+      <div class="main-section">
+        <div class="container">
+           <div class="main-section__wrapper">
+            <h2 class="main-section__title">Загрузка изображения и его обработка</h2>
+
+            <div class="upload_form_cont">
+
+                <form id="upload_form" enctype="multipart/form-data" method="post" >
+                    {% csrf_token %}
+
+                    <div>
+                        <div><label for="image_file">Выберите файл</label></div>
+                        <div><input type="file" name="image_file" id="image_file" onchange="fileSelected();" /></div>
+                    </div>
+                   <div class="desctop">
+                    <div>
+                        <input type="button" value="Обработка" onclick="startUploading()" />
+                    </div>
+                   </div>
+                   <div id="fileinfo">
+                    <div id="filename"></div>
+                    <div id="filesize"></div>
+                    <div id="filetype"></div>
+                    <div id="filedim"></div>
+                </div>
+                    <div id="error">Вы не выбрали файл!</div>
+                    <div id="error2">Ошибка загрузки файла!</div>
+                    <div id="abort">Загрузка прервана пользователем!</div>
+                    <div id="warnsize">Ваш файл больше допустимого размера!</div>
+                    <div id="progress_info">
+                        <div id="progress"></div>
+                         <div id="progress_percent">&nbsp;</div>
+                         <div class="clear_both"></div>
+                        <div>
+                             <div id="speed">&nbsp;</div>
+                             <div id="remaining">&nbsp;</div>
+                             <div id="b_transfered">&nbsp;</div>
+                             <div class="clear_both"></div>
+                        </div>
+
+                    </div>
+                </form>
+                <div id="image_result">
+                    <img id="preview" />
+                </div>
+               </div>
+
+
+                <div class="mobile">
+                    <div>
+                        <input type="button" value="Обработка" onclick="startUploading()" />
+                    </div>
+                    <div id="fileinfo">
+                        <div id="filename"></div>
+                        <div id="filesize"></div>
+                        <div id="filetype"></div>
+                        <div id="filedim"></div>
+                    </div>
+                    </div>
+
+
+           </div>
+
+        </div>
+
+      </div>
+                          <div id="upload_response" div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

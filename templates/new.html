@@ -1,0 +1,79 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <style>-->
+<!--        .center-container {-->
+<!--            text-align: center;-->
+<!--            margin: 0 auto; /* Set left and right margins to auto */-->
+<!--            max-width: 1500px; /* Set a maximum width for the container if needed */-->
+<!--        }-->
+
+<!--        .centered-content {-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        -->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="center-container">-->
+<!--    <div class="centered-content">-->
+<!--        <img id="previews" src="{{image_url}}" alt="Image Preview" style="width: {{width}}; height: 800px;" >-->
+<!--    </div>-->
+
+<!--    <div class="centered-content">-->
+<!--        <br><br>-->
+<!--        <h3><a href="{{image_url}}" download>Скачать</a></h3>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .center-container{
+            margin-top: 20px;
+        }
+      #previews2{
+        width: 600px;
+      }
+     .center-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width:752px){
+        #previews2{
+            width: 100%;
+        }
+
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="center-container">
+    <div class="centered-content">
+        <img id="previews2" src="{{image_url}}" alt="Image Preview"  >
+        <h3><a href="{{image_url}}" download>Скачать</a></h3>
+    </div>
+
+
+</div>
+
+</body>
+</html>
