@@ -31,6 +31,7 @@ class GenerateImageView(APIView):
             original_image.save(processed_image_path)
             responses.append({
                 'image_url': f"https://9e24-84-54-120-115.ngrok-free.app/media/processed_image_{image.name}-{curent_time}.jpg",
+                'upload_image': f"media/processed_image_{image.name}-{curent_time}.jpg",
                 'width': f"{width}px",
                 'name': f"{image.name}",
                 'height': f"{height}px",
